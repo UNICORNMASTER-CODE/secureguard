@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "build:frontend": "cd client && vite build",
+    "build:backend": "tsc server/index.ts --outDir dist/server",
+    "build": "npm run build:frontend && npm run build:backend",
+    "start": "node dist/server/index.js",
+    "deploy:gh-pages": "npm run build:frontend && gh-pages -d client/dist"
+  }
+}
